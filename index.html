@@ -84,9 +84,39 @@
               />
             </div>
             <div class="header__select-container">
-              <div class="header__select-purpose"></div>
-              <div class="header__select-location"></div>
-              <div class="header__select-type"></div>
+              <div class="header__select-wrapper purpose">
+                <button type="button" class="header__select-dropdown-btn purpose_btn">
+                  Purpose
+                </button>
+                <div class="header__select-dropdown-menu purpose">
+                  <div class="header__select-item">Value 1</div>
+                  <div class="header__select-item">Value 2</div>
+                  <div class="header__select-item">Value 3</div>
+                </div>
+                <input class="header__select-input" name='purpose' type="text" disabled />
+              </div>
+              <div class="header__select-wrapper location">
+                <button type="button" class="header__select-dropdown-btn location_btn">
+                  Location
+                </button>
+                <div class="header__select-dropdown-menu location">
+                  <div class="header__select-item">Value 1</div>
+                  <div class="header__select-item">Value 2</div>
+                  <div class="header__select-item">Value 3</div>
+                </div>
+                <input class="header__select-input" name='location' type="text" disabled />
+              </div>
+              <div class="header__select-wrapper type">
+                <button type="button" class="header__select-dropdown-btn type_btn">
+                  Type
+                </button>
+                <div class="header__select-dropdown-menu type">
+                  <div class="header__select-item">Value 1</div>
+                  <div class="header__select-item">Value 2</div>
+                  <div class="header__select-item">Value 3</div>
+                </div>
+                <input class="header__select-input" name='type' type="text" disabled />
+              </div>
               <button class="header__select-button" type="button">
                 Search
               </button>
@@ -331,7 +361,7 @@
                   src="./images/card_img1.png"
                   alt="image"
                 />
-                <h3 class="why-to-choose-us__card-title">Easy to find</h3>
+                <h3 class="why-to-choose-us__card-title">Easy To Find</h3>
                 <p class="why-to-choose-us__card-subtitle">
                   Urna, massa aliqua dui pellentesque. Ac, gravida in. Diam
                   vitae, nec mattis lectus quam pretium amet facilisis.
@@ -362,6 +392,61 @@
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+        <section class="testimonials">
+          <div class="testimonials__container">
+            <img src="./images/coloms.svg" class="testimonials__colons" />
+            <div class="swiper text-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <p class="slide-feedback" data-swiper-parallax="-200%">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br />
+                    Doloremque deserunt exercitationem non perferendis
+                    officiis<br />
+                    modi tempore. Officiis, officia, omnis assumenda mollitia
+                    error pariatur libero saepe cum exercitationem modi
+                    distinctio quibusdam.
+                  </p>
+                  <p class="slide-author" data-swiper-parallax="-700%">
+                    Elena Pravo
+                  </p>
+                  <p class="slide-author-post" data-swiper-parallax="-1100%">
+                    Ceo, Upstate
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <p class="slide-feedback" data-swiper-parallax="-200%">
+                    lorem ipsum dolor sit, amet consectetur adipisicing elit.<br />
+                    Doloremque deserunt exercitationem non perferendis
+                    officiis<br />
+                    modi tempore.
+                  </p>
+                  <p class="slide-author" data-swiper-parallax="-700%">
+                    Jason Statham
+                  </p>
+                  <p class="slide-author-post" data-swiper-parallax="-1100%">
+                    Ceo, Upstate
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <p class="slide-feedback" data-swiper-parallax="-200%">
+                    Officiis, officia, omnis assumenda mollitia error
+                    pariatur<br />
+                    libero saepe cum exercitationem modi distinctio
+                    quibusdam.<br />
+                  </p>
+                  <p class="slide-author" data-swiper-parallax="-700%">
+                    Chuck Norris
+                  </p>
+                  <p class="slide-author-post" data-swiper-parallax="-1100%">
+                    Ceo, Upstate
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </section>
         <section class="get-in-touch">

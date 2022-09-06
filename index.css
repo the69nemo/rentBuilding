@@ -103,7 +103,7 @@ body {
 }
 
 .button-prev::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -28px;
   left: -32px;
@@ -112,7 +112,7 @@ body {
   background-color: transparent;
   border: 1px solid #fff;
   border-radius: 50%;
-  transition: transform  .2s ease;
+  transition: transform 0.2s ease;
 }
 
 .button-prev:hover::after,
@@ -131,7 +131,7 @@ body {
 }
 
 .button-next::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -28px;
   left: -32px;
@@ -140,7 +140,7 @@ body {
   background-color: transparent;
   border: 1px solid #fff;
   border-radius: 50%;
-  transition: transform  .2s ease;
+  transition: transform 0.2s ease;
 }
 /* -=====+Header+=====- */
 
@@ -273,28 +273,117 @@ body {
   left: 0;
   bottom: 118px;
   width: 889px;
-  height: 100px;
+  min-height: 100px;
   padding: 5px;
   background: #fff;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.3);
 }
 
-.header__select-purpose {
+.header__select-wrapper {
+  position: relative;
+  padding-left: 5px;
+}
+
+.purpose {
   width: 195px;
   border-right: 1px solid #e8e8e8;
 }
 
-.header__select-location {
+.header__select-dropdown-btn {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #858585;
+  border: 0;
+  background-color: transparent;
+  margin: 28px 0 0 40px;
+  cursor: pointer;
+}
+
+.header__select-dropdown-menu {
+  visibility: hidden;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.header__select-input {
+  width: 50%;
+  margin-left: 45px;
+  outline: none;
+  border: 0;
+  color: #121b25;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 126%;
+}
+
+.header__select-wrapper.active .header__select-dropdown-menu {
+  visibility: visible;
+}
+
+.header__select-dropdown-btn::after {
+  content: "";
+  position: absolute;
+  top: 33px;
+  left: 0;
+  background: url(./images/arrow_down.svg) no-repeat center;
+  width: 9px;
+  height: 13px;
+  transition: transform .8s ease;
+}
+
+.purpose_btn::after  {
+  left: 120px;
+}
+
+.location_btn::after  {
+  left: 123px;
+}
+
+.type_btn::after {
+  left: 90px;
+}
+
+.header__select-wrapper.active .header__select-dropdown-btn::after {
+  transform: rotate(-180deg);
+}
+
+.header__select-item {
+  cursor: pointer;
+  color: black;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 8px;
+}
+
+.header__select-item:hover {
+  background-color: var(--green);
+}
+
+.location {
   width: 259px;
   border-right: 1px solid #e8e8e8;
 }
 
-.header__select-type {
+.type {
   width: 259px;
   border-right: 1px solid #e8e8e8;
 }
 
 .header__select-button {
+  cursor: pointer;;
   background-color: var(--green);
   border: 0;
   padding: 31px 42px;
@@ -359,7 +448,7 @@ body {
 /* -=====+Why-to-choose-us+=====- */
 
 .why-to-choose-us {
-  margin: 180px 0 95px;
+  margin: 180px 0 0;
 }
 
 .why-to-choose-us__title {
@@ -417,6 +506,81 @@ body {
   font-size: 18px;
   line-height: 170%;
   text-align: center;
+}
+
+/* -=====+testimonials+=====- */
+
+.testimonials {
+  margin: 190px 0 180px;
+}
+
+.testimonials__container {
+  position: relative;
+  max-width: 1018px;
+}
+
+.testimonials__colons {
+  margin-top: 85px;
+}
+
+.slide-feedback {
+  height: 148px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 15px 0 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 157%;
+  text-transform: capitalize;
+}
+
+.slide-author {
+  margin: 25px 0 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 126%;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+}
+
+.slide-author-post {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 170%;
+  color: #d6d6d6;
+}
+
+.swiper-button-prev {
+  width: 58px;
+  height: 38px;
+  position: absolute;
+  cursor: pointer;
+  top: 370px;
+  left: 838px;
+  border-right: 1px solid #353f49;
+  padding-right: 35px;
+  background: url(./images/big_arrow.svg) no-repeat;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
+
+.swiper-button-next {
+  width: 23px;
+  height: 38px;
+  cursor: pointer;
+  position: absolute;
+  top: 370px;
+  left: 931px;
+  background: url(./images/big_arrow.svg) no-repeat center;
+  transform: rotate(180deg);
 }
 
 /* -=====+get-in-touch+=====- */
